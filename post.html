@@ -13,14 +13,15 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             /* list-style: none; */
             text-decoration: none;
+            user-select: none;
         }
         :root{
-            --bg-color: hsl(0,0%,5%);
+            --bg-color: hsl(0, 0%, 0%);
             --light-grey: hsl(0,0%, 15%);
             --border: rgba(255, 255, 255, 0.2);
         }
         h1{
-            font-size: 30px;
+            font-size: 25px;
         }
         i{
             font-size: 20px;
@@ -77,14 +78,23 @@
             align-items: center;
             gap: .5rem;
             justify-content: center;
-            padding: 5px 10px;
+            padding: 0 10px;
+            box-shadow: 0 0 20px rgba(128, 0, 128, .5);
         }
         input{
             width: 100%;
-            padding: 10px;
+            padding: 5px 10px;
             background-color: transparent;
             border: none;
             border-right: 1px solid var(--border);
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+        .redit-logo{
+            background-color: purple;
+            padding: 5px;
+            border-radius: 30px;
         }
         .icons{
             padding: 10px;
@@ -124,13 +134,15 @@
             background-color: hsl(0,0%,10% );
         }
 
-
         .feeds{
-            padding: 15px 20px;
+            padding: 0 15px ;
         }
         .feeds-header{
             border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
+            padding: 5px 0;
+        }
+        .feeds-header i{
+            font-size: 14px;
         }
         .feed-container{
             border-bottom: 1px solid var(--border);
@@ -150,7 +162,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .feed-head button{
             padding: 10px;
@@ -189,7 +201,9 @@
             <h1>IknowLagos</h1>
         </div>
         <div class="input">
-            <i class="fa-brands fa-reddit-alien"></i>
+            <a href="#" class="redit-logo">
+                <i class="fa-brands fa-reddit-alien"></i>
+            </a>
             <input type="text">
             <a href="#" class="icons">
                 <i class="fa-brands fa-app-store"></i>
@@ -219,82 +233,31 @@
     <section class="main">
         <div class="sidebar">
             <nav>
-                <a href="#" class="home active">
+                <a href="feeds.html" class="home active">
                     <i class="fa-regular fa-house"></i>
                     <p>Home</p>
                 </a>
                 <a href="#" class="popular">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <p>Popular</p>
+                    <p>Discover</p>
                 </a>
                 <a href="#" class="news">
                     <i class="fa-regular fa-newspaper"></i>
-                    <p>News</p>
+                    <p>Events</p>
                 </a>
                 <a href="#" class="Explore">
                     <i class="fa-regular fa-compass"></i>
-                    <p>Explore</p>
+                    <p>Places</p>
+                </a>
+                <a href="post.html" class="Explore">
+                    <i class="fa-solid fa-plus"></i>                    
+                    <p>Create</p>
+                </a>
+                <a href="#" class="Explore">
+                    <i class="fa-regular fa-compass"></i>
+                    <p>Profile</p>
                 </a>
             </nav>
-        </div>
-        <div class="feeds">
-            <div class="feeds-header">
-                <button>
-                    <a href="#">
-                        <p>Best</p>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </a>
-                </button>
-                <button>
-                    <a href="#">
-                        <i class="fa-solid fa-server"></i>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </a>
-                </button>
-            </div>
-            <div class="feeds-body">
-                <div class="feed-container">
-                    <div class="feed">
-                        <div class="feed-head">
-                            <div class="feed-head-main">
-                                <!-- <img src="" alt=""> -->
-                                <small>r/micro/saas</small>
-                                <small>12hr. ago</small>
-                                <small>Becuase you've shown interest in a similar community</small>
-                            </div>
-                            <aside>
-                                <button>Join</button>
-                                <button class="more">
-                                    <i class="fa-solid fa-ellipsis"></i>
-                                </button>
-                            </aside>
-                        </div>
-                        <div class="feed-body">
-                            <h2 class="feed-title">1 Month after launching my SaaS: $1k revenue, 50 paying customer, 2000 signups. Here's what worked</h2>
-                            <div class="feed-image">
-                                <img src="feed-image.png" alt="">
-                            </div>
-                            <div class="feed-reviews">
-                                <button>
-                                    <i class="fa-solid fa-arrow-up"></i>
-                                    <p>44</p>
-                                    <i class="fa-solid fa-arrow-down"></i>
-                                </button>
-                                <button class="comments">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p>24</p>
-                                </button>
-                                <button class="badges">
-                                    <i class="fa-solid fa-award"></i>
-                                </button>
-                                <button class="share">
-                                    <p>Share</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="communinty"></div>
     </section>
