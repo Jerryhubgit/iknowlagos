@@ -4,195 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="post.css">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* list-style: none; */
-            text-decoration: none;
-            user-select: none;
-        }
-        :root{
-            --bg-color: hsl(0, 0%, 0%);
-            --light-grey: hsl(0,0%, 15%);
-            --border: rgba(255, 255, 255, 0.2);
-        }
-        h1{
-            font-size: 25px;
-        }
-        i{
-            font-size: 20px;
-        }
-        p{
-            color: hsl(0,0%,90%);
-        }
-        a{
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-self: center;
-            gap: .5rem;
-        }
-        button{
-            background-color: transparent;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 60px;
-        }
-        button:hover{
-            background-color: var(--light-grey);
-        }
-        img{
-            width: 100%;
-            border-radius: 20px;
-            margin: 10px 0;
-        }
-
-
-
-        body{
-            color: white;
-            background-color: var(--bg-color);
-            height: 100vh;
-        }
-        header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 15px;
-            border-bottom: 1px solid var(--border);
-        }
-        .header_links{
-            display: flex;
-            /* gap: 1rem; */
-        }
-        .input{
-            border: 1px solid var(--border);
-            border: 2px solid purple;
-            border-radius: 60px;
-            width: 40%;
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-            justify-content: center;
-            padding: 0 10px;
-            box-shadow: 0 0 20px rgba(128, 0, 128, .5);
-        }
-        input{
-            width: 100%;
-            padding: 5px 10px;
-            background-color: transparent;
-            border: none;
-            border-right: 1px solid var(--border);
-            color: white;
-            font-size: 16px;
-            outline: none;
-        }
-        .redit-logo{
-            background-color: purple;
-            padding: 5px;
-            border-radius: 30px;
-        }
-        .icons{
-            padding: 10px;
-            border-radius: 40px;
-        }
-        .icons:hover{
-            background-color: var(--light-grey);
-        }
-
-        /* -------------- nav bars --------------- */
-        section.main{
-            display: grid;
-            grid-template-columns: 20% 1fr 25%;
-            height: 100%;
-        }
-        .sidebar{
-            border-right: 1px solid var(--border);
-            padding: 10px 15px;
-            height: 100%;
-        }
-        .sidebar nav{
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
-        }
-        .sidebar a{
-            display: flex;
-            align-items: center;
-            justify-self: center;
-            padding: 15px;
-            width: 100%;
-            border-radius: 10px;
-        }
-        .sidebar a.active{
-            background-color: hsl(0,0%,20%);
-        }
-        .sidebar a:hover{
-            background-color: hsl(0,0%,10% );
-        }
-
-        .feeds{
-            padding: 0 15px ;
-        }
-        .feeds-header{
-            border-bottom: 1px solid var(--border);
-            padding: 5px 0;
-        }
-        .feeds-header i{
-            font-size: 14px;
-        }
-        .feed-container{
-            border-bottom: 1px solid var(--border);
-        }
-        .feed{
-            margin: 10px 0;
-            padding: 10px 15px;
-            border-radius: 10px;
-        }
-        .feed h2{
-            color: hsl(0, 0%, 90%);
-        }
-        .feed:hover{
-            background-color: hsl(0,0%,10%);
-        }
-        .feed-head{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 5px;
-        }
-        .feed-head button{
-            padding: 10px;
-            color: white;
-        }
-        .feed-head button:first-child{
-            background-color: blue;
-            color: white;
-            padding: 5px 20px;
-        }
-        .feed-head-main{
-            display: flex;
-            align-self: center;
-            justify-self: center;
-            gap: .5rem;
-        }
-        .feed-reviews{
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-        }
-        .feed-reviews button{
-            background-color: var(--light-grey);
-            display: flex;
-            align-items: center;
-            justify-self: center;
-            color: white;
-        }
-
-    </style>
 </head>
 <body>
     
@@ -259,7 +73,33 @@
                 </a>
             </nav>
         </div>
-        <div class="communinty"></div>
+        <div class="create-post">
+            <h2>Create post</h2>
+            <button class="select-community">
+                <a href="#">
+                    <p>Select a community</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+            </button>
+            <div class="post-type">
+                <p>Text</p>
+                <p>Images & Video</p>
+                <p>Link</p>
+                <p>Poll</p>
+            </div>
+            <div class="post-title">
+                <input type="text" placeholder="title">
+                <p>0/300</p>
+            </div>
+            <div class="post-body">
+                <button>Add tags</button>
+                <textarea placeholder="Body text (optional)"></textarea>
+                <div class="actions-post-btns">
+                    <button>Save Draft</button>
+                    <button>Post</button>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
