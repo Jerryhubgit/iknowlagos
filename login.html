@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login{
+            background-color: hsl(0,0%, 10%);
+            padding: 40px 50px;
+            width: 450px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .login-types {
+            margin: 20px 0;
+        }
+        .login-types .third-party{
+            border: 1px solid var(--border);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            gap: .5rem;
+        }
+        .login-types input{
+            border: none;
+            background-color: hsl(0, 0%, 15%);
+            margin: 5px 0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .login-types button{
+            width: 100%;
+            margin-top: 30px;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="login">
+        <h1>Log In</h1>
+        <p>By continuing, you agree to our User Agreement and acknowledge that you understand the privacy and policy</p>
+        <div class="login-types">
+            <div class="third-party phone-number">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <p>Continue with Phone Number</p>
+            </div>
+            <div class="third-party google">
+                <i class="fa-brands fa-google"></i>
+                <p>Continue with Google</p>
+            </div>
+            <p>OR</p>
+            <div class="manual-login">
+                <input type="text" placeholder="Email or username">
+                <input type="text" placeholder="Password">
+                <a href="#">Forgot Password?</a>
+                <p>New to iKnowLagos<a href="#">Sign Up</a></p>
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
